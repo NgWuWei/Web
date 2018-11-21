@@ -1,0 +1,99 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AssessmentMenu.master.cs" Inherits="Web.AssessmentMenu" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server">
+
+         </asp:ContentPlaceHolder>
+    </title>
+
+    <style type="text/css">
+        ul{
+            list-style-type:none;
+            margin:0;
+            padding:0;
+            overflow:hidden;
+            background-color:#333;
+        }
+        li{
+            float:left;
+        }
+        li a, .dropbtn{
+            display:inline-block;
+            color:white;
+            text-align:center;
+            padding: 14px 16px;
+            text-decoration:none;
+        }
+        li a:hover, dropdown:hover .dropbtn{
+            background-color:red;
+        }
+
+        li.dropdown{
+            display:inline-block;
+        }
+        .dropdown-content{
+            display:none;
+            position:absolute;
+            background-color:#28378f;
+            min-width:160px;
+            box-shadow:0px 8px 16px 0px rgba(0,0,0,0.8);
+            z-index:1;
+        }
+
+        dropdown-content a{
+            color:black;
+            padding:20px 30px;
+            text-decoration:none;
+            display:block;
+            text-align:center;
+        }
+        .dropdown-content a:hover{
+            background-color: #808080;
+        }
+        .dropdown:hover .dropdown-content {
+            display:block;
+        }
+        ul.topnav li a.active{
+            background-color:#4CAF50;
+        }
+        
+        li.right{
+            float:right;
+            background-color:#487ff1;
+        }
+        a.active{
+            background-color:#4CAF50;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+   
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <ul>
+               <li><a class="active" href="Menu.aspx">CLASSROOM</a></li>
+               <li><a href="#">Books</a></li>
+               <li class ="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Tools &#10000</a>
+                    <div class="dropdown-content">
+                        <a href="#">New Test+</a>
+                        <a href="#">New List+</a>
+                        <a href="#">New Group+</a>
+                    </div>
+                </li>
+                <li class="right"><a href="#">Login/SignUp &#128273</a></li>
+            </ul>
+            <asp:ContentPlaceHolder ID="body" runat="server">
+
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
