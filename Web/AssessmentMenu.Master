@@ -5,6 +5,7 @@
 <html>
 <head runat="server">
     <title>
+    <!--TODO add logo for all title -->
         <asp:ContentPlaceHolder ID="title" runat="server">
 
          </asp:ContentPlaceHolder>
@@ -14,7 +15,6 @@
         ul{
             list-style-type:none;
             margin:0;
-            padding:0;
             overflow:hidden;
             background-color:#333;
         }
@@ -43,7 +43,6 @@
             box-shadow:0px 8px 16px 0px rgba(0,0,0,0.8);
             z-index:1;
         }
-        
 
         dropdown-content a{
             color:black;

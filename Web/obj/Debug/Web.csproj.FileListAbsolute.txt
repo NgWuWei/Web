@@ -107,10 +107,10 @@ D:\GitHub\Web\Web\bin\roslyn\VBCSCompiler.exe
 D:\GitHub\Web\Web\bin\roslyn\VBCSCompiler.exe.config
 D:\GitHub\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\GitHub\Web\Web\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\GitHub\Web\Web\obj\Debug\Web.csprojAssemblyReference.cache
 D:\GitHub\Web\Web\obj\Debug\Web.Properties.Resources.resources
 D:\GitHub\Web\Web\obj\Debug\Web.csproj.GenerateResource.cache
 D:\GitHub\Web\Web\obj\Debug\Web.csproj.CoreCompileInputs.cache
 D:\GitHub\Web\Web\obj\Debug\Web.csproj.CopyComplete
 D:\GitHub\Web\Web\obj\Debug\Web.dll
 D:\GitHub\Web\Web\obj\Debug\Web.pdb
+D:\GitHub\Web\Web\obj\Debug\Web.csprojAssemblyReference.cache

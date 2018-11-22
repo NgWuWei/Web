@@ -11,7 +11,11 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // enable this when database is linked
+            // HACK disable for testing remember
+            if (Session["user"] == null) {
+                Response.Redirect("~/Login.aspx");
+            }
         }
     }
 }

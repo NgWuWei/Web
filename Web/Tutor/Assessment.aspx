@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/AssessmentMenu.Master" AutoEventWireup="true" CodeBehind="Tutor.aspx.cs" Inherits="Web.Tutor.Tutor" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Assessment.aspx.cs" Inherits="Web.Tutor.Assessment" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
@@ -10,10 +10,12 @@
     <div><h1>tutor page
         tutor add question 
          </h1>
-        View profile, 
-
-        Go to assessment, 
-
-        View all student
+        Create assessment
+        &nbsp;
+        View assessment
+        &nbsp;
+        Update assessment
+        &nbsp;
+        Delete assessment
     </div>
 </asp:Content>

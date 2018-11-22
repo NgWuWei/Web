@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" MasterPageFile="~/AssessmentMenu.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Web.Student" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/AssessmentMenu.Master" AutoEventWireup="true" CodeBehind="Student.aspx.cs" Inherits="Web.Student.Student" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
@@ -7,5 +7,16 @@
 </asp:Content>
 
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-    <div><h1>student page</h1></div>
+    <div><h1>Student
+         </h1></div>
+    <div>
+        View assessment
+        &nbsp;
+        View Result
+        &nbsp;
+        <asp:HyperLink ID="HyperLink1" runat="server">Change Password</asp:HyperLink>
+        <asp:HyperLink ID="HyperLink2" runat="server">View Profile</asp:HyperLink>
+        <asp:LoginName ID="LoginName1" runat="server" />
+        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+    </div>
 </asp:Content>

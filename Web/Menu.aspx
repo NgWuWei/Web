@@ -46,13 +46,12 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <div style="float:right">
         <br />
-        HELLO!!!!!!
         <asp:ImageButton ID="ImageButton1" runat="server" Height="51px" ImageUrl="~/picture/test.jpg" Width="52px" />
         <asp:ImageButton ID="ImageButton2" runat="server" CssClass="auto-style13" Height="50px" ImageUrl="~/picture/group.png" Width="49px" />
         <asp:ImageButton ID="ImageButton3" runat="server" CssClass="auto-style14" Height="47px" ImageUrl="~/picture/link.png" Width="45px" />
     </div>
 
-    </br>
+    <br />
     <asp:Panel ID="Panel1" runat="server" Height="588px" Width="991px">
         <div style="text-align:center" class="auto-style11">
             <h2 style="text-align:center">How ClassWork Works</h2>

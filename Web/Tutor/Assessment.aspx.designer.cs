@@ -10,6 +10,6 @@
 namespace Web.Tutor {
     
     
-    public partial class Tutor {
+    public partial class Assessment {
     }
 }
