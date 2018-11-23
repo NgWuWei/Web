@@ -84,8 +84,15 @@
     <None Include="picture\right.jpg" />
     <None Include="picture\test.jpg" />
     <Content Include="Register.aspx" />
+    <None Include="Resources\save.png" />
+    <None Include="Resources\edit.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\cancel.png" />
+    <None Include="Resources\addnew.png" />
     <Content Include="Student\Student.aspx" />
+    <Content Include="Tutor\AddTestDetails.aspx" />
     <Content Include="Tutor\Assessment.aspx" />
+    <Content Include="Tutor\AddTestMenu.aspx" />
     <Content Include="Tutor\Tutor.aspx" />
     <Content Include="Tutor\ViewRecords.aspx" />
     <Content Include="Web.config" />
@@ -142,12 +149,26 @@
     <Compile Include="Student\Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tutor\AddTestDetails.aspx.cs">
+      <DependentUpon>AddTestDetails.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\AddTestDetails.aspx.designer.cs">
+      <DependentUpon>AddTestDetails.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Tutor\Assessment.aspx.cs">
       <DependentUpon>Assessment.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\Assessment.aspx.designer.cs">
       <DependentUpon>Assessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\AddTestMenu.aspx.cs">
+      <DependentUpon>AddTestMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\AddTestMenu.aspx.designer.cs">
+      <DependentUpon>AddTestMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\Tutor.aspx.cs">
       <DependentUpon>Tutor.aspx</DependentUpon>

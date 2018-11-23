@@ -59,8 +59,7 @@
                                     </td>
                                     <td>
                                         <asp:Calendar ID="BirthDate" runat="server" ></asp:Calendar>
-                                        <asp:RequiredFieldValidator ID="BirthDateRequired" runat="server" ControlToValidate="BirthDate" ErrorMessage="Birth date is required." ToolTip="Birth date is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
-                                    </td>
+                                        </td>
                                 </tr>
                                 <tr>
                                     <td>
