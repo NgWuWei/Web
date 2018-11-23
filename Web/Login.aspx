@@ -10,14 +10,54 @@
     <form id="form1" runat="server">
         <asp:Panel ID="panelLogin" runat="server">
             <h1>Login</h1>
-            User Id: <asp:TextBox ID="userId" runat="server"></asp:TextBox><br />
-            Password: <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
-            <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" />
-            <br />
-            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="BtnLogin_Click"/>
-            &nbsp;
-            <!--TODO change OnClick here to -->
-            <asp:Button ID="btnHelp" runat="server" Text="Forgot Password?"/><br />
+            <asp:Login ID="Login1" runat="server">
+                <LayoutTemplate>
+                    <table style="border-collapse:collapse;">
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td colspan="2">Log In</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Label ID="EmailLabel" runat="server" AssociatedControlID="Email">Email:</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="Email" runat="server"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="EmailRequired" runat="server" ControlToValidate="Email" ErrorMessage="Email is required." ToolTip="Email is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
+                                        </td>
+                                        <td>
+                                            <asp:TextBox ID="Password" runat="server" TextMode="Password" MaxLength="30"></asp:TextBox>
+                                            <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="Login1">*</asp:RequiredFieldValidator>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <asp:CheckBox ID="RememberMe" runat="server" Text="Remember me next time." />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2" style="color:Red;">
+                                            <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">
+                                            <asp:Button ID="LoginButton" runat="server" CommandName="Login" Text="Log In" ValidationGroup="Login1" OnClick="LoginButton_Click"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </LayoutTemplate>
+            </asp:Login>
             <div>Dont have an account? Sign up
                 <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Register.aspx">here</asp:HyperLink>
             </div>

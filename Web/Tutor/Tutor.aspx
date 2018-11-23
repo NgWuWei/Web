@@ -12,8 +12,8 @@
          </h1>
         View profile, 
 
-        Go to assessment, 
+        assessment page, 
 
-        View all student
+        View all student with results
     </div>
 </asp:Content>
