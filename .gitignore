@@ -18,3 +18,6 @@ Web/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 Web/obj/Debug/Web.csproj.CoreCompileInputs.cache
 Web/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 Web/obj/Debug/Web.csproj.CoreCompileInputs.cache
+Web/App_Data/Database1.mdf
+Web/App_Data/Database1_log.ldf
+.vs/config/applicationhost.config
