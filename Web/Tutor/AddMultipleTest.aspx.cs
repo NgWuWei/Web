@@ -10,10 +10,10 @@ namespace Web.Tutor
 {
     public partial class AddTestDetails : System.Web.UI.Page
     {
-        
+
         protected void Page_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         protected void DropDownList2_SelectedIndexChanged(object sender, EventArgs e)
@@ -44,18 +44,37 @@ namespace Web.Tutor
             }
         }
 
+        TextBox mulquestiontb;
+        TextBox mulquestionResulttxt;
+        Label mulquestionlbl;
+        CheckBox mulquestioncb;
+
         static int i = 0;
+        
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            TextBox tb;
+
             i++;
             for (int j = 0; j < i; j++)
             {
-                tb = new TextBox {
-                    ID = j.ToString()
-                };
+                mulquestiontb = new TextBox();
+                mulquestionResulttxt = new TextBox();
+                mulquestionlbl = new Label();
+                mulquestioncb = new CheckBox();
 
-                PlaceHolder1.Controls.Add(tb);
+                
+
+                mulquestiontb.ID = j.ToString();
+                mulquestionlbl.ID = j.ToString();
+                mulquestioncb.ID = j.ToString();
+                mulquestionlbl.Text = Convert.ToChar(j + 65).ToString();
+
+                
+                PlaceHolder1.Controls.Add(mulquestionlbl);
+                PlaceHolder1.Controls.Add(mulquestioncb);
+                PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
+                PlaceHolder1.Controls.Add(mulquestiontb);
+                PlaceHolder1.Controls.Add(mulquestionResulttxt);
                 PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
 
             }

@@ -60,9 +60,6 @@
                 
                 <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                 <br />
-                <br />
-                <br />
-                
                 <asp:Button ID="Button1" runat="server" Text="Add More Question" OnClick="Button1_Click1" />
                 
             </td>
