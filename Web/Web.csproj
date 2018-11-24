@@ -95,6 +95,7 @@
     <Content Include="Tutor\AddTestMenu.aspx" />
     <Content Include="Tutor\SelectedTestMenu.aspx" />
     <Content Include="Tutor\Tutor.aspx" />
+    <Content Include="Tutor\ViewRecords.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>

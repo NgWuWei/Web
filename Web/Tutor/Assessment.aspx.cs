@@ -11,8 +11,7 @@ namespace Web.Tutor {
         protected void Page_Load(object sender, EventArgs e) {
 
         }
-
-        static int i = 0;
+        
         protected void BtnAdd_Click(object sender, EventArgs e) {
 
         }
