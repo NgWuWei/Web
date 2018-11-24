@@ -90,7 +90,7 @@
     <None Include="Resources\cancel.png" />
     <None Include="Resources\addnew.png" />
     <Content Include="Student\Student.aspx" />
-    <Content Include="Tutor\AddTestDetails.aspx" />
+    <Content Include="Tutor\AddMultipleTest.aspx" />
     <Content Include="Tutor\Assessment.aspx" />
     <Content Include="Tutor\AddTestMenu.aspx" />
     <Content Include="Tutor\Tutor.aspx" />
@@ -148,12 +148,12 @@
     <Compile Include="Student\Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tutor\AddTestDetails.aspx.cs">
-      <DependentUpon>AddTestDetails.aspx</DependentUpon>
+    <Compile Include="Tutor\AddMultipleTest.aspx.cs">
+      <DependentUpon>AddMultipleTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tutor\AddTestDetails.aspx.designer.cs">
-      <DependentUpon>AddTestDetails.aspx</DependentUpon>
+    <Compile Include="Tutor\AddMultipleTest.aspx.designer.cs">
+      <DependentUpon>AddMultipleTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\Assessment.aspx.cs">
       <DependentUpon>Assessment.aspx</DependentUpon>

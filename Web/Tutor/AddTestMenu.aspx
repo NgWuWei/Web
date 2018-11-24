@@ -22,7 +22,7 @@
         <asp:TextBox ID="TextBox1" runat="server" style="text-align:center" CssClass="auto-style2"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="txtAddTest" runat="server" BackColor="#FF3300" ForeColor="White" Text="Start Adding Question" PostBackUrl="~/Tutor/AddTestDetails.aspx"  />
+        <asp:Button ID="txtAddTest" runat="server" BackColor="#FF3300" ForeColor="White" Text="Start Adding Question" PostBackUrl="~/Tutor/AddMultipleTest.aspx"  />
     </div>
     
 
