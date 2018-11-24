@@ -27,16 +27,9 @@
         </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
-
-
     <br />
     <br />
-    <asp:PlaceHolder ID="PlaceHolder2" runat="server">
-        
-        <asp:Panel ID="Panel1" runat="server">
-            <asp:Button ID="Button2" runat="server" Text="Back To Text" />
-        </asp:Panel>
-    </asp:PlaceHolder>
+    
     <table class="auto-style8">
         <tr>
             <td class="auto-style7">Question Entry Options</td>
@@ -62,13 +55,14 @@
             </td>
         </tr>
         <tr>
-            <td class="auto-style7">
-                <asp:Button ID="Svebtn" runat="server" Text="Save" />
-            </td>
+            <td class="auto-style7"></td>
             <td class="auto-style5" style="height:40px">
                 
                 <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                 <br />
+                <br />
+                <br />
+                
                 <asp:Button ID="Button1" runat="server" Text="Add More Question" OnClick="Button1_Click1" />
                 
             </td>

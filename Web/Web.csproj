@@ -184,6 +184,13 @@
     <Compile Include="Tutor\Tutor.aspx.designer.cs">
       <DependentUpon>Tutor.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Tutor\ViewRecords.aspx.cs">
+      <DependentUpon>ViewRecords.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\ViewRecords.aspx.designer.cs">
+      <DependentUpon>ViewRecords.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="AssessmentMenu.Master" />

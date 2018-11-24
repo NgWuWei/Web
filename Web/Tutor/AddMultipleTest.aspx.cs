@@ -44,34 +44,18 @@ namespace Web.Tutor
             }
         }
 
-        TextBox mulQuestiontb;
-        Label mulQuestionlbl;
-        CheckBox mulQuestioncb;
         static int i = 0;
-
         protected void Button1_Click1(object sender, EventArgs e)
         {
-
+            TextBox tb;
             i++;
-
             for (int j = 0; j < i; j++)
             {
-                mulQuestiontb = new TextBox();
-                mulQuestionlbl = new Label();
-                mulQuestioncb = new CheckBox();
+                tb = new TextBox {
+                    ID = j.ToString()
+                };
 
-                mulQuestionlbl.ID = j.ToString();
-                mulQuestiontb.ID = j.ToString();
-                mulQuestioncb.ID = j.ToString();
-
-                mulQuestionlbl.Text = Convert.ToChar(j + 65).ToString();
-               
-
-                PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
-                PlaceHolder1.Controls.Add(mulQuestionlbl);
-                PlaceHolder1.Controls.Add(mulQuestioncb);
-                PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
-                PlaceHolder1.Controls.Add(mulQuestiontb);
+                PlaceHolder1.Controls.Add(tb);
                 PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
 
             }

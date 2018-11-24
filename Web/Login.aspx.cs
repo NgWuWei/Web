@@ -10,14 +10,13 @@ using System.Web.UI.WebControls;
 namespace Web {
     public partial class Login : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
+
         }
 
-        protected void BtnLogin_Click(object sender, EventArgs e) {
-            Session["userId"] = userId.Text;
+        protected void LoginButton_Click(object sender, EventArgs e) {
+            // reset both to empty
             string isTutor = "";
             string isStudent = "";
-            // TODO get user role from database, if tutor then go to Tutor page
-            // index 2, 1 is tutor, 0 is student
 
             // match user ID to see if valid
             string str = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
@@ -26,30 +25,37 @@ namespace Web {
             // open connection
             connection.Open();
 
-            // add model in Models Folder
+            // get tutor
             SqlCommand cmd = new SqlCommand("select tutId from Tutors where tutId = @tutId", connection);
-            // identify id as tutor
-            cmd.Parameters.AddWithValue("@tutId", userId.Text);
+            cmd.Parameters.AddWithValue("@tutId", Login1.FindControl("Email").ToString());
             isTutor = cmd.ExecuteScalar() as string;
             // get student
-            cmd = new SqlCommand("select studId from Students where studId = @studId", connection);
-            cmd.Parameters.AddWithValue("@studId", userId.Text);
+            cmd = new SqlCommand("select studId from Students where studId = @studEmail", connection);
+            cmd.Parameters.AddWithValue("@studId", Login1.FindControl("Email").ToString());
             isStudent = cmd.ExecuteScalar() as string;
 
             connection.Close();
 
+            // direct to respective pages
             if (isTutor != null) {
                 Response.Redirect("~/Tutor/Tutor.aspx");
-            }else if(isStudent != null) {
+                // set this session to this user
+                Session["user"] = isTutor;
+                Session["auth"] = "Tutor"; 
+            } else if (isStudent != null) {
                 Response.Redirect("~/Student/Student.aspx");
+                Session["user"] = isStudent;
+                Session["auth"] = "Student";
             } else {
+                // remove this and replace with error
                 Response.Redirect("~/Login.aspx");
+                // UNDONE sign in fail and display error
             }
-
-            //TODO either sign in by email or given id
         }
 
-        //TODO a function to toggle textmode of password textfield
+        /** TODO    a function to toggle textmode of password textfield
+                    password recovery asp
+                    add model in Models Folder **/
     }
 
 }

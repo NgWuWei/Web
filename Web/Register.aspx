@@ -9,9 +9,9 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            <asp:CreateUserWizard ID="CreateUserWizard1" runat="server">
+            <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" OnCreatedUser="CreateUserWizard1_CreatedUser">
                 <WizardSteps>
-                    <asp:CreateUserWizardStep runat="server">
+                    <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                         <ContentTemplate>
                             <table>
                                 <tr>
@@ -28,10 +28,22 @@
                                 </tr>
                                 <tr>
                                     <td>
+                                        <asp:Label ID="GenderLabel" runat="server" AssociatedControlID="Gender">Gender:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:RadioButtonList ID="Gender" runat="server" RepeatDirection="Horizontal">
+                                            <asp:ListItem Value="M">Male</asp:ListItem>
+                                            <asp:ListItem Value="F">Female</asp:ListItem>
+                                        </asp:RadioButtonList>
+                                        <asp:RequiredFieldValidator ID="GenderRequired" runat="server" ControlToValidate="Gender" ErrorMessage="Gender is required." ToolTip="Gender is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
                                         <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
                                     </td>
                                     <td>
-                                        <asp:TextBox ID="Password" runat="server" TextMode="Password"></asp:TextBox>
+                                        <asp:TextBox ID="Password" runat="server" TextMode="Password" MaxLength="30"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
@@ -55,11 +67,29 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <asp:Label ID="BirthDatelabel" runat="server" AssociatedControlID="BirthDate">Birthdate:</asp:Label>
+                                        <asp:Label ID="BirthDateLabel" runat="server" AssociatedControlID="BirthDate">Birthdate:</asp:Label>
                                     </td>
                                     <td>
-                                        <asp:Calendar ID="BirthDate" runat="server" ></asp:Calendar>
-                                        </td>
+                                        <asp:Calendar ID="BirthDateCalendar" runat="server" OnSelectionChanged="BirthDateCalendar_SelectionChanged"></asp:Calendar>
+                                        <asp:TextBox ID="BirthDate" runat="server"></asp:TextBox>
+                                        <asp:RequiredFieldValidator ID="BirthDateRequired" runat="server" ControlToValidate="BirthDate" ErrorMessage="Birthdate is required." ToolTip="Birthdate is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <asp:Label ID="DepartmentLabel" runat="server" AssociatedControlID="Department">Department:</asp:Label>
+                                    </td>
+                                    <td>
+                                        <asp:DropDownList ID="Department" runat="server" DataTextField="Department">
+                                            <asp:ListItem Value="FAFB">Faculty of Accountancy, Finance & Business</asp:ListItem>
+                                            <asp:ListItem Value="FCCI">Faculty of Communication & Creative Industries</asp:ListItem>
+                                            <asp:ListItem Value="FOBE">Faculty of Built Environment</asp:ListItem>
+                                            <asp:ListItem Value="FOAS">Faculty of Applied Sciences</asp:ListItem>
+                                            <asp:ListItem Value="FOCS">Faculty of Computing & Information Technology</asp:ListItem>
+                                            <asp:ListItem Value="FOET">Faculty of Engineering & Technology</asp:ListItem>
+                                        </asp:DropDownList>
+                                        <asp:RequiredFieldValidator ID="DepartmentRequired" runat="server" ControlToValidate="Department" ErrorMessage="Department is required." ToolTip="Department is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>
@@ -95,13 +125,35 @@
                             <table border="0" style="width:100%;height:100%;">
                                 <tr>
                                     <td>
-                                        <asp:Button ID="StepNextButton" runat="server" CommandName="MoveNext" Text="Create User" ValidationGroup="CreateUserWizard1"/>
+                                        <asp:Button ID="StepNextButton" runat="server" CommandName="MoveNext" Text="Sign Up" ValidationGroup="CreateUserWizard1" OnClick="CreateUserWizard1_CreatedUser"/>
                                     </td>
                                 </tr>
                             </table>
                         </CustomNavigationTemplate>
                     </asp:CreateUserWizardStep>
-                    <asp:CompleteWizardStep runat="server" />
+
+                    <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server">
+                        <ContentTemplate>
+                            <table border="0">
+                                <tr>
+                                    <td colspan="2">
+                                        Complete</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Your account has been successfully created.<br />
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        &nbsp;<asp:Button ID="LoginButton" runat="server" CausesValidation="False" CommandName="Login"
+                                            Text="Login" ValidationGroup="CreateUserWizard1" PostBackUrl="~/Login.aspx"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </ContentTemplate>
+                    </asp:CompleteWizardStep>
+
                 </WizardSteps>
             </asp:CreateUserWizard>
         </div>

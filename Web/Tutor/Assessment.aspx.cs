@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 
 namespace Web.Tutor {
     public partial class Assessment : System.Web.UI.Page {
         protected void Page_Load(object sender, EventArgs e) {
+
+        }
+
+        static int i = 0;
+        protected void BtnAdd_Click(object sender, EventArgs e) {
 
         }
     }
