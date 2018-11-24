@@ -93,6 +93,7 @@
     <Content Include="Tutor\AddMultipleTest.aspx" />
     <Content Include="Tutor\Assessment.aspx" />
     <Content Include="Tutor\AddTestMenu.aspx" />
+    <Content Include="Tutor\SelectedTestMenu.aspx" />
     <Content Include="Tutor\Tutor.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -168,6 +169,13 @@
     </Compile>
     <Compile Include="Tutor\AddTestMenu.aspx.designer.cs">
       <DependentUpon>AddTestMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\SelectedTestMenu.aspx.cs">
+      <DependentUpon>SelectedTestMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\SelectedTestMenu.aspx.designer.cs">
+      <DependentUpon>SelectedTestMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\Tutor.aspx.cs">
       <DependentUpon>Tutor.aspx</DependentUpon>
