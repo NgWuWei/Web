@@ -71,7 +71,7 @@
                                     </td>
                                     <td>
                                         <asp:Calendar ID="BirthDateCalendar" runat="server" OnSelectionChanged="BirthDateCalendar_SelectionChanged"></asp:Calendar>
-                                        <asp:TextBox ID="BirthDate" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="BirthDate" runat="server" ReadOnly="true"></asp:TextBox>
                                         <asp:RequiredFieldValidator ID="BirthDateRequired" runat="server" ControlToValidate="BirthDate" ErrorMessage="Birthdate is required." ToolTip="Birthdate is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                     </td>
                                 </tr>
@@ -80,13 +80,14 @@
                                         <asp:Label ID="DepartmentLabel" runat="server" AssociatedControlID="Department">Department:</asp:Label>
                                     </td>
                                     <td>
+                                        <!-- Link with datasource after assessment done -->
                                         <asp:DropDownList ID="Department" runat="server" DataTextField="Department">
-                                            <asp:ListItem Value="FAFB">Faculty of Accountancy, Finance & Business</asp:ListItem>
-                                            <asp:ListItem Value="FCCI">Faculty of Communication & Creative Industries</asp:ListItem>
-                                            <asp:ListItem Value="FOBE">Faculty of Built Environment</asp:ListItem>
-                                            <asp:ListItem Value="FOAS">Faculty of Applied Sciences</asp:ListItem>
-                                            <asp:ListItem Value="FOCS">Faculty of Computing & Information Technology</asp:ListItem>
-                                            <asp:ListItem Value="FOET">Faculty of Engineering & Technology</asp:ListItem>
+                                            <asp:ListItem Value="1">Faculty of Accountancy, Finance & Business</asp:ListItem>
+                                            <asp:ListItem Value="2">Faculty of Communication & Creative Industries</asp:ListItem>
+                                            <asp:ListItem Value="3">Faculty of Built Environment</asp:ListItem>
+                                            <asp:ListItem Value="4">Faculty of Applied Sciences</asp:ListItem>
+                                            <asp:ListItem Value="5">Faculty of Computing & Information Technology</asp:ListItem>
+                                            <asp:ListItem Value="6">Faculty of Engineering & Technology</asp:ListItem>
                                         </asp:DropDownList>
                                         <asp:RequiredFieldValidator ID="DepartmentRequired" runat="server" ControlToValidate="Department" ErrorMessage="Department is required." ToolTip="Department is required." ValidationGroup="CreateUserWizard1">*</asp:RequiredFieldValidator>
                                     </td>

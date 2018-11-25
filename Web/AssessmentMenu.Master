@@ -88,10 +88,22 @@
                         <a href="#">New Group+</a>
                     </div>
                 </li>
+                <!-- UNDONE CREATE C# IF ELSE TO TOGGLE LOGIN WITH SIGNED IN-->
+                <!--
+                    drop down list to do these, View Profile > Pass / Sign out / Settings
+                <asp:HyperLink ID="HyperLink1" runat="server">Change Password</asp:HyperLink>
+                <asp:HyperLink ID="HyperLink2" runat="server">View Profile</asp:HyperLink>
+                <asp:LoginName ID="LoginName1" runat="server" />
+                <asp:LoginStatus ID="LoginStatus1" runat="server" />-->
                 <li class="right"><a href="#">Login/SignUp &#128273</a></li>
             </ul>
             <asp:ContentPlaceHolder ID="body" runat="server">
-
+                <!-- UNDONE custom view for this, also move these into tutor master page -->
+                <div ID="SiteMap1">
+                <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1">
+                </asp:TreeView>
+                <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                </div>
             </asp:ContentPlaceHolder>
         </div>
     </form>
