@@ -19,10 +19,19 @@
 
     <div style="border-style:groove;align-items:center;text-align:center" class="auto-style1">
         <asp:Label ID="lblNewTest" runat="server" Text="Test Name : " ></asp:Label>
-        <asp:TextBox ID="TextBox1" runat="server" style="text-align:center" CssClass="auto-style2"></asp:TextBox>
+        <asp:TextBox ID="txtTestName" runat="server" style="text-align:center" CssClass="auto-style2"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="txtAddTest" runat="server" BackColor="#FF3300" ForeColor="White" Text="Start Adding Question" PostBackUrl="~/Tutor/AddMultipleTest.aspx"  />
+        <asp:Button ID="AddTestbtn" runat="server" BackColor="#FF3300" ForeColor="White" Text="Start Adding Question"   OnClick="AddTestbtn_Click"    />
+        <br />
+        <br />
+        <br />
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="TestName" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="TestName" HeaderText="TestName" ReadOnly="True" SortExpression="TestName" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" SelectCommand="SELECT * FROM [Test]"></asp:SqlDataSource>
     </div>
     
 

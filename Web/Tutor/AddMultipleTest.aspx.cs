@@ -30,10 +30,6 @@ namespace Web.Tutor
             {
                 Response.Redirect("AddMultipleTest");
             }
-            else if (QuestionTypeList.SelectedItem.Equals("Essay"))
-            {
-                Response.Redirect("AddMultipleTest");
-            }
             else if (QuestionTypeList.SelectedItem.Equals("Free Text"))
             {
                 Response.Redirect("AddMultipleTest");
@@ -62,14 +58,13 @@ namespace Web.Tutor
                 mulquestionlbl = new Label();
                 mulquestioncb = new CheckBox();
 
-                
-
                 mulquestiontb.ID = j.ToString();
                 mulquestionlbl.ID = j.ToString();
                 mulquestioncb.ID = j.ToString();
+                mulquestionResulttxt.ID = j.ToString();
                 mulquestionlbl.Text = Convert.ToChar(j + 65).ToString();
 
-                
+                PlaceHolder1.Controls.Add(new LiteralControl("<br />"));
                 PlaceHolder1.Controls.Add(mulquestionlbl);
                 PlaceHolder1.Controls.Add(mulquestioncb);
                 PlaceHolder1.Controls.Add(new LiteralControl("<br />"));

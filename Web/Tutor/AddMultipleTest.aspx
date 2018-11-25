@@ -38,7 +38,6 @@
         <tr>
             <td class="auto-style10">*QUESTION TYPE<br />
                 <asp:DropDownList ID="QuestionTypeList" runat="server">
-                    <asp:ListItem>Select Question Type</asp:ListItem>
                     <asp:ListItem>Multiple Question</asp:ListItem>
                     <asp:ListItem>True False</asp:ListItem>
                     <asp:ListItem>Matching</asp:ListItem>
