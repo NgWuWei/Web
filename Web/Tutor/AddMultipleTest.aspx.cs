@@ -20,17 +20,20 @@ namespace Web.Tutor
 
         static int i = 0;
         static int questionNumber = 1;
+        TextBox mulquestiontb;
+        TextBox mulquestionResulttxt;
+        Label mulquestionlbl;
+        Label mulquestionResultlbl;
+        Label mulquestionlbl2;
+        Label spacelbl;
+        CheckBox cb;
+        Label Text;
 
         protected void AddAnswerOptionbtn_Click(object sender, EventArgs e)
         {
             TextBox mulquestiontb;
             TextBox mulquestionResulttxt;
-            Label mulquestionlbl;
-            Label mulquestionResultlbl;
-            Label mulquestionlbl2;
-            Label spacelbl;
-            CheckBox cb;
-            Label Text;
+            
             i++;
             for (int j = 0; j < i; j++)
             {
@@ -74,21 +77,10 @@ namespace Web.Tutor
 
         protected void savebtn_Click(object sender, EventArgs e)
         {
-            CheckBox cb = new CheckBox();
-            // get selected cehckbox only
-            for (int i = 0; i < questionNumber; i++)
-            {
-                if (cb.ID.Equals("body_chk_" + i) == true)
-                {
-                   CorrectAnswerddl.SelectedItem.Value += cb.Text;
-                }
-
-            }
-
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString2"].ConnectionString);
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
                 conn.Open();
                 string insertQuery1 = "INSERT into MultiQuestion(TestID, TestName, QuestionType, QuestionDesc, QuestionResult, AnswerCorrect) values (@TestID, @TestName, @QuestionType, @QuestionDesc, @QuestionResult, @AnswerCorrect)";
-                string insertQuery2 = "INSERT into MultiQuestionDetails(TestID,AnswerDesc, AnswerLabel )values (@TestID, @AnswerDesc, @AnswerLabel)";
+                string insertQuery2 = "INSERT into MultiQuestionDetails(TestID, AnswerDesc, AnswerLabel )values (@TestID, @AnswerDesc, @AnswerLabel)";
 
                 SqlCommand cmd = new SqlCommand(insertQuery1, conn);
                 SqlCommand cmd2 = new SqlCommand(insertQuery2, conn);
