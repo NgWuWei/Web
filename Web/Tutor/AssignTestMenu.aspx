@@ -11,24 +11,17 @@
         }
         .auto-style3 {
             margin-right: 0px;
+            margin-top: 154px;
         }
     </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+    <p>
+        Test Name: <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
+    </p>
     <asp:Panel ID="Panel1" runat="server">
-
-
-
-
-
-
-
-
-
-
         <asp:GridView ID="GridView1" runat="server" ShowFooter="true" DataKeyNames="QuestionID" ShowHeaderWhenEmpty="true" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" CssClass="auto-style3" Width="441px" 
-                            OnRowCommand="gvTest_RowCommand" OnRowEditing="gvTest_RowEditing" OnRowCancelingEdit="gvTest_RowCancelingEdit"
-                OnRowUpdating="gvTest_RowUpdating" OnRowDeleting="gvTest_RowDeleting"
+                           
             >
             <AlternatingRowStyle BackColor="White" />
             <EditRowStyle BackColor="#2461BF" />
@@ -81,13 +74,13 @@
 
                  <asp:TemplateField HeaderText="Each Question Result">
                     <ItemTemplate>
-                         <asp:Label Text='<%# Eval("QuestionResult") %>' runat="server" />
+                         <asp:Label Text='<%# Eval("EachQuestionResult") %>' runat="server" />
                     </ItemTemplate>
                     <EditItemTemplate>
-                         <asp:TextBox ID="txtQuestionResult" Text='<%# Eval("QuestionResult") %>' runat="server" />
+                         <asp:TextBox ID="txtEachQuestionResult" Text='<%# Eval("EachQuestionResult") %>' runat="server" />
                     </EditItemTemplate>
                     <FooterTemplate>
-                         <asp:TextBox ID="txtNewQuestionResult" runat="server" />
+                         <asp:TextBox ID="txtNewEachQuestionResult" runat="server" />
                     </FooterTemplate>
                 </asp:TemplateField>
 

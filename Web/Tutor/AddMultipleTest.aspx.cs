@@ -99,7 +99,6 @@ namespace Web.Tutor
                 cmd.ExecuteNonQuery();
                 cmd2.ExecuteNonQuery();
 
-
                 Response.Write("New Test Name Added Successfully!!!Thank you");
                 conn.Close();
                 QuestionNolbl.Text = questionNumber.ToString();

@@ -93,11 +93,13 @@
     <None Include="Resources\delete.png" />
     <None Include="Resources\cancel.png" />
     <None Include="Resources\addnew.png" />
+    <None Include="Resources\assign.png" />
     <Content Include="Student\Student.aspx" />
     <Content Include="Tutor\AddMultipleTest.aspx" />
     <Content Include="Tutor\Assessment.aspx" />
     <Content Include="Tutor\AddTestMenu.aspx" />
     <Content Include="Tutor\AssignTestMenu.aspx" />
+    <Content Include="Tutor\TestMenu.aspx" />
     <Content Include="Tutor\Tutor.aspx" />
     <Content Include="Tutor\ViewRecords.aspx" />
     <Content Include="Web.config" />
@@ -181,6 +183,13 @@
     </Compile>
     <Compile Include="Tutor\AssignTestMenu.aspx.designer.cs">
       <DependentUpon>AssignTestMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\TestMenu.aspx.cs">
+      <DependentUpon>TestMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\TestMenu.aspx.designer.cs">
+      <DependentUpon>TestMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\Tutor.aspx.cs">
       <DependentUpon>Tutor.aspx</DependentUpon>
