@@ -6,11 +6,17 @@
         .auto-style1 {
             margin-top: 175px;
             width: 494px;
-            height: 98px;
+            height: 126px;
             margin-left: 304px;
         }
         .auto-style2 {
             margin-left: 90px;
+        }
+        .auto-style3 {
+            margin-left: 70px;
+        }
+        .auto-style4 {
+            margin-top: 61px;
         }
     </style>
 </asp:Content>
@@ -22,19 +28,15 @@
         <asp:TextBox ID="txtTestName" runat="server" style="text-align:center" CssClass="auto-style2"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="AddTestbtn" runat="server" BackColor="#FF3300" ForeColor="White" Text="Start Adding Question"   OnClick="AddTestbtn_Click"    />
+        <asp:Label ID="QuestionTypelbl" runat="server" Text="Question Type : "></asp:Label>
+        <asp:DropDownList ID="QuestionTypeList" runat="server" CssClass="auto-style3">
+            <asp:ListItem>Multiple Question</asp:ListItem>
+            <asp:ListItem>Free Text</asp:ListItem>
+            <asp:ListItem>Match List</asp:ListItem>
+            <asp:ListItem>True False</asp:ListItem>
+        </asp:DropDownList>
         <br />
         <br />
-        <br />
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="TestName" DataSourceID="SqlDataSource1">
-            <Columns>
-                <asp:BoundField DataField="TestName" HeaderText="TestName" ReadOnly="True" SortExpression="TestName" />
-            </Columns>
-        </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" SelectCommand="SELECT * FROM [Test]"></asp:SqlDataSource>
-    </div>
-    
-
-
-
+        <asp:Button ID="AddTestbtn" runat="server" BackColor="#FF3300" ForeColor="White" Text="Start Adding Question"  OnClientClick="javascript:alert('You are now will be directed to the add question page')"  OnClick ="AddTestbtn_Click" CssClass="auto-style4" />
+      </div>
 </asp:Content>

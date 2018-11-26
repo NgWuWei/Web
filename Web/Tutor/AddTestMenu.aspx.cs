@@ -21,26 +21,26 @@ namespace Web.Tutor
 
         protected void AddTestbtn_Click(object sender, EventArgs e)
         {
-            try
-            {
+           Session["TestName"] = txtTestName.Text;
 
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString2"].ConnectionString);
-                conn.Open();
-                string insertQuery = "INSERT into Test(TestName)values (@TestName)";
-                SqlCommand cmd = new SqlCommand(insertQuery, conn);
-                cmd.Parameters.AddWithValue("@TestName", txtTestName.Text);
-                cmd.ExecuteNonQuery();
+            if (QuestionTypeList.SelectedItem.Value == "Multiple Question")
+                {
+                    Session["TestType"] = QuestionTypeList.SelectedItem.Value;
+                    Response.Redirect("~/Tutor/AddMultipleTest.aspx");
+                }
+                else if(QuestionTypeList.SelectedItem.Value == "Free Text")
+                {
+                    
+                }
+                else if (QuestionTypeList.SelectedItem.Value == " ")
+                {
 
-                Response.Write("New Test Name Added Successfully!!!Thank you");
-                conn.Close();
-                Response.Redirect("~/Tutor/AddMultipleTest.aspx");
+                }
+                else if (QuestionTypeList.SelectedItem.Value == " ")
+                {
 
-
-            }
-            catch (Exception ex)
-            {
-                Response.Write("error" + ex.ToString());
-            }
+                }
+               
         }
     }
 }

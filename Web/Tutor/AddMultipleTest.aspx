@@ -24,43 +24,70 @@
         .auto-style11 {
             height: 22px;
         }
+        .auto-style12 {
+            margin-left: 47px;
+        }
+        .auto-style13 {
+            height: 40px;
+            width: 171px;
+        }
+        .auto-style14 {
+            height: 40px;
+        }
+        .auto-style15 {
+            float:right;
+        }
         </style>
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <br />
     <br />
-    
-    <table class="auto-style8">
+    <br />
+    <p>
+        TEST NAME     : <asp:Label ID="lblTestName" runat="server"></asp:Label>
+    </p>
+    <p>
+        QUESTION TYPE : <asp:Label ID="QuestionTypelbl" runat="server"></asp:Label>
+        <asp:Button ID="Backbtn" runat="server" Text="Return To Test Menu" CssClass="auto-style15"  NavigateUrl="~/Tutor/AssignTestMenu.aspx"/>
+    </p>
+
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" SelectCommand="SELECT * FROM [MultiQuestion], [MultiQuetsionDetails]"></asp:SqlDataSource>
+
+    <table class="auto-style8">  
         <tr>
             <td class="auto-style7">Question Entry Options</td>
             <td class="auto-style5">Question Details</td>
         </tr>
         <tr>
-            <td class="auto-style10">*QUESTION TYPE<br />
-                <asp:DropDownList ID="QuestionTypeList" runat="server">
-                    <asp:ListItem>Multiple Question</asp:ListItem>
-                    <asp:ListItem>True False</asp:ListItem>
-                    <asp:ListItem>Matching</asp:ListItem>
-                    <asp:ListItem>Essay</asp:ListItem>
-                    <asp:ListItem>Free Text</asp:ListItem>
-                </asp:DropDownList>
+            <td class="auto-style10"><br />
+                
                 <br />
                 <br />
-                *TOTAL QUESTION<br />
-                <asp:Label ID="totalQuestionlabel" runat="server"></asp:Label>
+                *QUESTION NO.<br />
+                <asp:Label ID="QuestionNolbl" runat="server"></asp:Label>
             </td>
             <td class="auto-style11">
                 <asp:TextBox ID="QuestionTxt" runat="server" CssClass="auto-style9" Height="126px" Width="535px"></asp:TextBox>
+                <br />
+                <asp:Label ID="mulquestionResultlbl" runat="server" Text="Please Enter the Marks: "></asp:Label>
+                <asp:TextBox ID="Resulttxt" runat="server" CssClass="auto-style12"></asp:TextBox>
+                <br />
+
             </td>
         </tr>
         <tr>
-            <td class="auto-style7"></td>
-            <td class="auto-style5" style="height:40px">
+            <td class="auto-style13">
+                *CORRECT ANSWER : <br />
+                <asp:DropDownList ID ="CorrectAnswerddl"  runat="server"></asp:DropDownList>
+                <br />
+                <br />
+                <asp:Button ID="savebtn" runat="server" Text="Save" OnClick="savebtn_Click" />
+            </td>
+            <td class="auto-style14">
                 
                 <asp:PlaceHolder ID="PlaceHolder1" runat="server"></asp:PlaceHolder>
                 <br />
-                <asp:Button ID="Button1" runat="server" Text="Add More Question" OnClick="Button1_Click1" />
-                
+                <asp:Button ID="AddAnswerOptionbtn" runat="server" Text="Add More Answer Options" OnClick="AddAnswerOptionbtn_Click" />
             </td>
         </tr>
     </table>

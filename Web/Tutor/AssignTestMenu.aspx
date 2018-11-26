@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AssessmentMenu.Master" AutoEventWireup="true" CodeBehind="SelectedTestMenu.aspx.cs" Inherits="Web.Tutor.TestMenu1" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/AssessmentMenu.Master" AutoEventWireup="true" CodeBehind="AssignTestMenu.aspx.cs" Inherits="Web.Tutor.TestMenu1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
@@ -14,6 +14,7 @@
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
     <asp:Panel ID="Panel1" runat="server">
         <asp:GridView ID="GridView1" runat="server"></asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server"></asp:SqlDataSource>
     </asp:Panel>
     <br />
     <asp:Panel ID="Panel2" runat="server" CssClass="auto-style1">
