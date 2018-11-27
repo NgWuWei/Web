@@ -100,7 +100,7 @@
     <Content Include="Tutor\Assessment.aspx" />
     <Content Include="Tutor\AddTestMenu.aspx" />
     <Content Include="Tutor\AssignTestMenu.aspx" />
-    <Content Include="Tutor\GroupDetails.aspx" />
+    <Content Include="Tutor\AddGroupDetails.aspx" />
     <Content Include="Tutor\TestMenu.aspx" />
     <Content Include="Tutor\Tutor.aspx" />
     <Content Include="Tutor\ViewRecords.aspx" />
@@ -193,12 +193,12 @@
     <Compile Include="Tutor\AssignTestMenu.aspx.designer.cs">
       <DependentUpon>AssignTestMenu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tutor\GroupDetails.aspx.cs">
-      <DependentUpon>GroupDetails.aspx</DependentUpon>
+    <Compile Include="Tutor\AddGroupDetails.aspx.cs">
+      <DependentUpon>AddGroupDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tutor\GroupDetails.aspx.designer.cs">
-      <DependentUpon>GroupDetails.aspx</DependentUpon>
+    <Compile Include="Tutor\AddGroupDetails.aspx.designer.cs">
+      <DependentUpon>AddGroupDetails.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\TestMenu.aspx.cs">
       <DependentUpon>TestMenu.aspx</DependentUpon>

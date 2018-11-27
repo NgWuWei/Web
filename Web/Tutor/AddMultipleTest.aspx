@@ -24,9 +24,6 @@
         .auto-style11 {
             height: 22px;
         }
-        .auto-style12 {
-            margin-left: 47px;
-        }
         .auto-style13 {
             height: 40px;
             width: 171px;
@@ -36,6 +33,11 @@
         }
         .auto-style15 {
             float:right;
+        }
+        .auto-style16 {
+            margin-left: 36px;
+            text-align: center;
+            position:center;
         }
         </style>
 </asp:Content>
@@ -48,7 +50,7 @@
     </p>
     <p>
         QUESTION TYPE : <asp:Label ID="QuestionTypelbl" runat="server"></asp:Label>
-        <asp:Button ID="Backbtn" runat="server" Text="Return To Test Menu" CssClass="auto-style15"  NavigateUrl="~/Tutor/AssignTestMenu.aspx"/>
+        <asp:Button ID="Backbtn" runat="server" Text="Return To Test Menu" CssClass="auto-style15"  NavigateUrl="~/Tutor/TestDetailsMenu.aspx"/>
     </p>
 
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:ConnectionString2 %>" SelectCommand="SELECT * FROM [MultiQuestion], [MultiQuetsionDetails]"></asp:SqlDataSource>
@@ -69,8 +71,19 @@
             <td class="auto-style11">
                 <asp:TextBox ID="QuestionTxt" runat="server" CssClass="auto-style9" Height="126px" Width="535px"></asp:TextBox>
                 <br />
-                <asp:Label ID="mulquestionResultlbl" runat="server" Text="Please Enter the Marks: "></asp:Label>
-                <asp:TextBox ID="Resulttxt" runat="server" CssClass="auto-style12"></asp:TextBox>
+                <asp:Label ID="mulquestionResultlbl" runat="server" Text="Please Select the Marks: "></asp:Label>
+                <asp:DropDownList ID="ddlEachMarks" runat="server" CssClass="auto-style16" Height="16px" Width="52px">
+                    <asp:ListItem>1</asp:ListItem>
+                    <asp:ListItem>2</asp:ListItem>
+                    <asp:ListItem>3</asp:ListItem>
+                    <asp:ListItem>4</asp:ListItem>
+                    <asp:ListItem>5</asp:ListItem>
+                    <asp:ListItem>6</asp:ListItem>
+                    <asp:ListItem>7</asp:ListItem>
+                    <asp:ListItem>8</asp:ListItem>
+                    <asp:ListItem>9</asp:ListItem>
+                    <asp:ListItem>10</asp:ListItem>
+                </asp:DropDownList>
                 <br />
 
             </td>
