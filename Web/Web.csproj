@@ -100,10 +100,11 @@
     <Content Include="Tutor\Assessment.aspx" />
     <Content Include="Tutor\AddTestMenu.aspx" />
     <Content Include="Tutor\AddGroupDetails.aspx" />
-    <Content Include="Tutor\AssignTestPart1.aspx" />
+    <Content Include="Tutor\AssignTest.aspx" />
     <Content Include="Tutor\TestMenu.aspx" />
     <Content Include="Tutor\Tutor.aspx" />
     <Content Include="Tutor\ViewRecords.aspx" />
+    <Content Include="Tutor\WebForm1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -193,12 +194,12 @@
     <Compile Include="Tutor\AddGroupDetails.aspx.designer.cs">
       <DependentUpon>AddGroupDetails.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tutor\AssignTestPart1.aspx.cs">
-      <DependentUpon>AssignTestPart1.aspx</DependentUpon>
+    <Compile Include="Tutor\AssignTest.aspx.cs">
+      <DependentUpon>AssignTest.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Tutor\AssignTestPart1.aspx.designer.cs">
-      <DependentUpon>AssignTestPart1.aspx</DependentUpon>
+    <Compile Include="Tutor\AssignTest.aspx.designer.cs">
+      <DependentUpon>AssignTest.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\TestMenu.aspx.cs">
       <DependentUpon>TestMenu.aspx</DependentUpon>
@@ -220,6 +221,13 @@
     </Compile>
     <Compile Include="Tutor\ViewRecords.aspx.designer.cs">
       <DependentUpon>ViewRecords.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
