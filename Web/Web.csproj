@@ -95,6 +95,9 @@
     <None Include="Resources\addnew.png" />
     <None Include="Resources\assign.png" />
     <Content Include="Student\Student.aspx" />
+    <Content Include="Student\StudentAssessment.aspx" />
+    <Content Include="Student\StudentQuestion.aspx" />
+    <Content Include="Student\ViewAssessment.aspx" />
     <Content Include="Tutor\AddMultipleTest.aspx" />
     <Content Include="Tutor\Assessment.aspx" />
     <Content Include="Tutor\AddTestMenu.aspx" />
@@ -155,6 +158,27 @@
     </Compile>
     <Compile Include="Student\Student.aspx.designer.cs">
       <DependentUpon>Student.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentAssessment.aspx.cs">
+      <DependentUpon>StudentAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentAssessment.aspx.designer.cs">
+      <DependentUpon>StudentAssessment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\StudentQuestion.aspx.cs">
+      <DependentUpon>StudentQuestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\StudentQuestion.aspx.designer.cs">
+      <DependentUpon>StudentQuestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ViewAssessment.aspx.cs">
+      <DependentUpon>ViewAssessment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Student\ViewAssessment.aspx.designer.cs">
+      <DependentUpon>ViewAssessment.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\AddMultipleTest.aspx.cs">
       <DependentUpon>AddMultipleTest.aspx</DependentUpon>
