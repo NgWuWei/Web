@@ -66,7 +66,7 @@
                     <ItemTemplate>
                         <asp:ImageButton ImageUrl="~/Resources/edit.png" runat="server" CommandName="Edit" ToolTip="Edit" Width="20px" Height="20px"/>
                         <asp:ImageButton ImageUrl="~/Resources/delete.png" runat="server" CommandName="Delete" ToolTip="Delete" Width="20px" Height="20px"/>
-                        <asp:ImageButton ImageUrl="~/Resources/assign.png" runat="server" ToolTip="Assign" Width="20px" Height="20px" />
+                        <asp:ImageButton ImageUrl="~/Resources/assign.png" runat="server" ToolTip="Assign" Width="20px" Height="20px"  />
                    </ItemTemplate>
                     <EditItemTemplate>
                         <asp:ImageButton ImageUrl="~/Resources/save.png" runat="server" CommandName="Update" ToolTip="Update" Width="20px" Height="20px"/>

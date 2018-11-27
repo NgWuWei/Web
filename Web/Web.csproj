@@ -99,8 +99,8 @@
     <Content Include="Tutor\AddMultipleTest.aspx" />
     <Content Include="Tutor\Assessment.aspx" />
     <Content Include="Tutor\AddTestMenu.aspx" />
-    <Content Include="Tutor\AssignTestMenu.aspx" />
     <Content Include="Tutor\AddGroupDetails.aspx" />
+    <Content Include="Tutor\AssignTestPart1.aspx" />
     <Content Include="Tutor\TestMenu.aspx" />
     <Content Include="Tutor\Tutor.aspx" />
     <Content Include="Tutor\ViewRecords.aspx" />
@@ -186,19 +186,19 @@
     <Compile Include="Tutor\AddTestMenu.aspx.designer.cs">
       <DependentUpon>AddTestMenu.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Tutor\AssignTestMenu.aspx.cs">
-      <DependentUpon>AssignTestMenu.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Tutor\AssignTestMenu.aspx.designer.cs">
-      <DependentUpon>AssignTestMenu.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Tutor\AddGroupDetails.aspx.cs">
       <DependentUpon>AddGroupDetails.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Tutor\AddGroupDetails.aspx.designer.cs">
       <DependentUpon>AddGroupDetails.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tutor\AssignTestPart1.aspx.cs">
+      <DependentUpon>AssignTestPart1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tutor\AssignTestPart1.aspx.designer.cs">
+      <DependentUpon>AssignTestPart1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Tutor\TestMenu.aspx.cs">
       <DependentUpon>TestMenu.aspx</DependentUpon>
