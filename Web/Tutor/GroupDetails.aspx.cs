@@ -11,7 +11,8 @@ namespace Web.Tutor
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblGroupName.Text = Session["GroupName"] as String;
+            
         }
     }
 }

@@ -13,31 +13,22 @@ namespace Web.Tutor {
     public partial class AddGroupMenu {
         
         /// <summary>
-        /// lblNewTest control.
+        /// lblNewGroup control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNewTest;
+        protected global::System.Web.UI.WebControls.Label lblNewGroup;
         
         /// <summary>
-        /// txtTestName control.
+        /// txtGroupName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTestName;
-        
-        /// <summary>
-        /// QuestionTypelbl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label QuestionTypelbl;
+        protected global::System.Web.UI.WebControls.TextBox txtGroupName;
         
         /// <summary>
         /// AddGroupbtn control.

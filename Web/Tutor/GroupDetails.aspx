@@ -4,4 +4,10 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+
+    <p>
+        GROUP NAME     : <asp:Label ID="lblGroupName" runat="server"></asp:Label>
+    </p>
+    
+
 </asp:Content>
